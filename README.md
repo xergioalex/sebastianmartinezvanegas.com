@@ -2,7 +2,6 @@
 
 Bienvenido al repositorio de nuestro sitio web de Sebastián Martínez Vanegas. Este proyecto está construido con Astro y desplegado en GitHub Pages.
 
-
 ## 🛠️ Tecnologías
 
 - [Astro](https://astro.build) - Framework web
@@ -59,4 +58,3 @@ Las invitaciones se manejan de forma segura a través de códigos únicos y est�
 - [Katherine](https://github.com/su-usuario)
 
 ---
-

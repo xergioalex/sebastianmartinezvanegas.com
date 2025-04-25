@@ -1,7 +1,6 @@
-# Sebastián Martínez Vanegas - Sitio Web
+# Sebastián Martínez Vanegas - Sitio Web..
 
 Bienvenido al repositorio de nuestro sitio web de Sebastián Martínez Vanegas. Este proyecto está construido con Astro y desplegado en GitHub Pages.
-
 
 ## 🛠️ Tecnologías
 
@@ -59,4 +58,3 @@ Las invitaciones se manejan de forma segura a través de códigos únicos y est�
 - [Katherine](https://github.com/su-usuario)
 
 ---
-

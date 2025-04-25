@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  sebastianmartinezvanegas: &sebastianmartinezvanegas
+    build:
+      context: .
+      dockerfile: ./sebastianmartinezvanegas/Dockerfile
+    working_dir: /app
+    volumes:
+      - ../..:/app
+    ports:
+      - '4444:4321'
+      - '9000:8969'
+    env_file:
+      - sebastianmartinezvanegas/.env
+    command:
+      - /bin/sh
+      - -c
+      - |
+        sleep infinity

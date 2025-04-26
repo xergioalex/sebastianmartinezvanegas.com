@@ -8,10 +8,7 @@ import typescriptParser from '@typescript-eslint/parser';
 import svelteParser from 'svelte-eslint-parser';
 import sveltePlugin from 'eslint-plugin-svelte';
 
-export default [
-  js.configs.recommended,
-  ...eslintPluginAstro.configs['flat/recommended'],
-  ...tseslint.configs.recommended,
+const config = [
   {
     languageOptions: {
       globals: {
@@ -20,6 +17,9 @@ export default [
       },
     },
   },
+  js.configs.recommended,
+  ...eslintPluginAstro.configs['flat/recommended'],
+  ...tseslint.configs.recommended,
   {
     files: ['**/*.astro'],
     languageOptions: {
@@ -117,3 +117,8 @@ export default [
     },
   },
 ];
+
+config[0].languageOptions.globals.AudioWorkletGlobalScope = false;
+delete config[0].languageOptions.globals['AudioWorkletGlobalScope '];
+
+export default config;

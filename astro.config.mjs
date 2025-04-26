@@ -7,9 +7,15 @@ export default defineConfig({
   output: 'static',
   site: 'https://www.sebastianmartinezvanegas.com',
   base: '/',
+  trailingSlash: 'never',
 	integrations: [tailwind()],
 
   server: {
     host: true,
+  },
+
+  build: {
+    assets: 'assets',
+    assetsPrefix: '/',
   },
 });

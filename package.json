@@ -17,7 +17,8 @@
     "prettier:fix": "prettier --write --ignore-path .prettierignore --ignore-path .gitignore '**/*.{astro,svelte,css,html,js,ts,md,yaml,yml}' '!package.json' '!**/devcontainer.json'",
     "ncu:check": "ncu",
     "ncu:upgrade": "ncu -u",
-    "test": "echo 'Running tests...'"
+    "test": "echo 'Running tests...'",
+    "release": "npm version patch -m \"[🤖 Sebastián Martínez Vanegas] New release to v%s launched 🚀\""
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.6.0",

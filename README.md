@@ -1,4 +1,4 @@
-# Sebastián Martínez Vanegas - Sitio Web..
+# Sebastián Martínez Vanegas - Sitio Web...
 
 This is a personal blog, portfolio, or blog template created for [Astro](https://astro.build).
 

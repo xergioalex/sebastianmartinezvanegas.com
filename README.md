@@ -1,21 +1,13 @@
-# Sebastián Martínez Vanegas - Sitio Web..
+# Sebastián Martínez Vanegas - Sitio Web...
 
-Bienvenido al repositorio de nuestro sitio web de Sebastián Martínez Vanegas. Este proyecto está construido con Astro y desplegado en GitHub Pages.
+This is a personal blog, portfolio, or blog template created for [Astro](https://astro.build).
 
 ## 🛠️ Tecnologías
 
-- [Astro](https://astro.build) - Framework web
-- [Svelte](https://svelte.dev) - Para componentes interactivos
-- [TailwindCSS](https://tailwindcss.com) - Estilos
-- [TypeScript](https://www.typescriptlang.org) - Tipado estático
-- [Google Maps API](https://developers.google.com/maps) - Mapas interactivos
+You can install this theme with the [Astro](https://astro.build) command like so:
 
-## 🚀 Desarrollo Local
-
-1. Clona el repositorio:
-
-```bash
-git clone https://github.com/tu-usuario/sebastianmartinezvanegas.com.git
+```js
+npm create astro@latest -- --template ccbikai/astro-aria
 ```
 
 2. Instala las dependencias:

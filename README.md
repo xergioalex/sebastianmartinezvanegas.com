@@ -28,7 +28,7 @@ PUBLIC_GOOGLE_MAPS_API_KEY=tu_api_key
 npm run dev
 ```
 
-## 📦 Despliegue
+## 📦 Despliegue.
 
 El sitio se despliega automáticamente en GitHub Pages cuando se hace push a la rama principal:
 

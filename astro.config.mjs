@@ -18,4 +18,12 @@ export default defineConfig({
     assets: 'assets',
     assetsPrefix: '/',
   },
+
+  // Configuración para manejar archivos estáticos
+  vite: {
+    publicDir: 'public',
+    build: {
+      assetsDir: 'assets'
+    }
+  }
 });

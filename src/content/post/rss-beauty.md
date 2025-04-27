@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/post.astro
 title: RSS.Beauty - Make Your RSS Beautiful!
 description: Beautify your RSS feeds with RSS.Beauty, featuring elegant interfaces, responsive design, and self-hosting support. Try it now!
 dateFormatted: Dec 31, 2024

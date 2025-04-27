@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/post.astro
 title: L(O*62).ONG - Make your URL longer
 description: loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo.ong is the longest domain name
 dateFormatted: Jun 1, 2024

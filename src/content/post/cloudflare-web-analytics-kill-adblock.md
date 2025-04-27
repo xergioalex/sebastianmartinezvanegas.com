@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/post.astro
 title: Solving the issue of Cloudflare Web Analytics being blocked by AdBlock
 description: Solving the issue of Cloudflare Web Analytics being blocked by AdBlock
 dateFormatted: Jan 8th, 2024

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/post.astro
 title: Run MCP Server in a Docker sandbox
 description: Run MCP Server in a Docker sandbox to avoid supply chain attacks.
 dateFormatted: Apr 25, 2025

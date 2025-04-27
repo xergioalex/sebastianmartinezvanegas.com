@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/post.astro
 title: BroadcastChannel - Turn your Telegram Channel into a MicroBlog
 description: Turn your Telegram Channel into a MicroBlog
 dateFormatted: Aug 11, 2024

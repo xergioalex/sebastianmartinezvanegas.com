@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/post.astro
 title: Cloudflare's New PyPI Mirror Service
 description: Cloudflare PyPI Mirror supports PEP 691 and CORS, enabling PyPI access in mainland China for Micropip with open-source code available
 dateFormatted: Dec 21, 2024

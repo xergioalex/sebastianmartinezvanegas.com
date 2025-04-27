@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/post.astro
 title: Run Python in Your Browser Effortlessly
 description: Run Python programs in the browser easily using Pyodide and WebAssembly for seamless execution of code and packages
 dateFormatted: Dec 21, 2024

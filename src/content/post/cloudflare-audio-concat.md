@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/post.astro
 title: Use Cloudflare Workers to concat audio files
 description: How to use Cloudflare Workers to merge audio files using FFmpeg in the browser.
 dateFormatted: April 19, 2025

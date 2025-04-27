@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/post.astro
 title: Minimal Docker Image Packaging for Vite SSR Projects
 description: Minimal Docker Image Packaging for Vite SSR Projects
 dateFormatted: Sep 1, 2024

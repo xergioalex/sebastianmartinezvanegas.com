@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/post.astro
 title: Low-Cost Deployment of Federated Universe Personal Instances
 description: Low-Cost Deployment of Federated Universe Personal Instances
 dateFormatted: Nov 27, 2023

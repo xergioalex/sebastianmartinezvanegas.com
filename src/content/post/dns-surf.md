@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/post.astro
 title: DNS.Surf - check DNS resolution results in different regions
 description: DNS.Surf - check DNS resolution results in different regions
 dateFormatted: Nov 8, 2023

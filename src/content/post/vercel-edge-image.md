@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/post.astro
 title: Using Vercel Edge to Process Images
 description: Using Vercel Edge to Process Images
 dateFormatted: Dec 17th, 2023

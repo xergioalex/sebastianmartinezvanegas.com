@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/post.astro
 title: How to Replace Google Safe Browsing with Cloudflare Zero Trust
 description: How to Replace Google Safe Browsing with Cloudflare Zero Trust
 dateFormatted: Jul 14th, 2024

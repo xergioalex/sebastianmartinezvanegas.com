@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/post.astro
 title: Email.ML - minimalistic temporary email
 description: Email.ML - minimalistic temporary email
 dateFormatted: Jun 6th, 2024

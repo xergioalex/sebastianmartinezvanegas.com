@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/post.astro
 title: Extract GitHub OpenGraph Images for Card Previews
 description: Extract GitHub OpenGraph Images for Card Previews
 dateFormatted: Dec 19, 2023

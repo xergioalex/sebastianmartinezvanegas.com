@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/post.astro
 title: Resolving Umami Blocked by AdBlock Issue
 description: Resolving Umami Blocked by AdBlock Issue
 dateFormatted: Jan 6, 2024

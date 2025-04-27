@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/post.astro
 title: Docker Registry Mirror via Cloudflare
 description: Set up a Docker Registry Mirror using Cloudflare Snippets with low-cost proxy solutions and modified code for various container registries
 dateFormatted: Dec 21, 2024

@@ -34,9 +34,9 @@ console.log(lang);
   </head>
   <body class="antialiased bg-white dark:bg-neutral-950">
     <SquareLines />
-    <Header />
+    <Header lang={lang} />
     <slot />
-    <Footer />
+    <Footer lang={lang} />
     <script src="../assets/js/main.js"></script>
     <Fragment set:html={import.meta.env.FOOTER_INJECT} />
   </body>

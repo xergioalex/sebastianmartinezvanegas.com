@@ -95,11 +95,13 @@ console.log(lang);
             aria-expanded="false"
             onclick="document.getElementById('lang-dropdown').classList.toggle('hidden')"
           >
-            {lang === 'es' ? (
-              <span class="text-xl leading-none align-middle relative top-[2px]">🇪🇸</span>
-            ) : (
-              <span class="text-xl leading-none align-middle relative top-[2px]">🇬🇧</span>
-            )}
+            {
+              lang === 'es' ? (
+                <span class="text-xl leading-none align-middle relative top-[2px]">🇪🇸</span>
+              ) : (
+                <span class="text-xl leading-none align-middle relative top-[2px]">🇬🇧</span>
+              )
+            }
             <svg
               class="ml-1 w-3 h-3 text-neutral-500"
               fill="none"
@@ -114,23 +116,25 @@ console.log(lang);
             id="lang-dropdown"
             class="absolute right-0 mt-2 w-36 bg-white dark:bg-neutral-900 rounded-xl shadow-lg border border-neutral-200 dark:border-neutral-700 z-50 py-2 hidden"
           >
-            {lang === 'es' ? (
-              <a
-                href="/en"
-                class="flex items-center gap-2 px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-base rounded-xl"
-              >
-                <span class="text-xl">🇬🇧</span>
-                <span>English</span>
-              </a>
-            ) : (
-              <a
-                href="/es"
-                class="flex items-center gap-2 px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-base rounded-xl"
-              >
-                <span class="text-xl">🇪🇸</span>
-                <span>Español</span>
-              </a>
-            )}
+            {
+              lang === 'es' ? (
+                <a
+                  href="/en"
+                  class="flex items-center gap-2 px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-base rounded-xl"
+                >
+                  <span class="text-xl">🇬🇧</span>
+                  <span>English</span>
+                </a>
+              ) : (
+                <a
+                  href="/es"
+                  class="flex items-center gap-2 px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-base rounded-xl"
+                >
+                  <span class="text-xl">🇪🇸</span>
+                  <span>Español</span>
+                </a>
+              )
+            }
           </div>
         </div>
         <div class="action-menu">

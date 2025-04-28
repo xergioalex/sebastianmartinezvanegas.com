@@ -1,7 +1,9 @@
 ---
 import menus from '../collections/menu.json';
-const { lang } = Astro.props;
-console.log(lang);
+let { lang } = Astro.props;
+if (!lang) {
+  lang = 'en';
+}
 ---
 
 <!-- This is an invisible div with relative position so that it takes up the height of the menu (because menu is absolute/fixed) -->
@@ -33,7 +35,7 @@ console.log(lang);
           </div>
         </div>
         {
-          menus[lang].map((menu) => {
+          menus[lang].map((menu: { name: string; url: string }) => {
             return (
               <a
                 href={menu.url}

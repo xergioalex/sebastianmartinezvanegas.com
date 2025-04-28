@@ -33,7 +33,7 @@ console.log(lang);
           </div>
         </div>
         {
-          menus.map((menu) => {
+          menus[lang].map((menu) => {
             return (
               <a
                 href={menu.url}
@@ -81,8 +81,8 @@ console.log(lang);
               >
             </div>
             <span class="hidden sm:inline-block">
-              <span id="dayText" class="ml-2">Day mode</span>
-              <span id="nightText" class="hidden ml-2">Night mode</span>
+              <span id="dayText" class="ml-2"></span>
+              <span id="nightText" class="hidden ml-2"></span>
             </span>
           </div>
         </div>
@@ -114,13 +114,13 @@ console.log(lang);
           </button>
           <div
             id="lang-dropdown"
-            class="absolute right-0 mt-2 w-36 bg-white dark:bg-neutral-900 rounded-xl shadow-lg border border-neutral-200 dark:border-neutral-700 z-50 py-2 hidden"
+            class="absolute right-0 mt-2 w-28 bg-white dark:bg-neutral-900 rounded-lg shadow-lg border border-neutral-200 dark:border-neutral-700 z-50 py-1 hidden"
           >
             {
               lang === 'es' ? (
                 <a
                   href="/en"
-                  class="flex items-center gap-2 px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-base rounded-xl"
+                  class="flex items-center gap-2 px-3 py-1 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-[15px] rounded-lg"
                 >
                   <span class="text-xl">🇬🇧</span>
                   <span>English</span>
@@ -128,7 +128,7 @@ console.log(lang);
               ) : (
                 <a
                   href="/es"
-                  class="flex items-center gap-2 px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-base rounded-xl"
+                  class="flex items-center gap-2 px-3 py-1 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-[15px] rounded-lg"
                 >
                   <span class="text-xl">🇪🇸</span>
                   <span>Español</span>
@@ -168,3 +168,17 @@ console.log(lang);
     </nav>
   </div>
 </header>
+
+<script>
+  // Close the language dropdown if a click is made outside of it
+  document.addEventListener('click', function (event) {
+    const langMenu = document.getElementById('lang-menu');
+    const langDropdown = document.getElementById('lang-dropdown');
+    const target = event.target as Node;
+    if (!langDropdown.classList.contains('hidden')) {
+      if (!langDropdown.contains(target) && !langMenu.contains(target)) {
+        langDropdown.classList.add('hidden');
+      }
+    }
+  });
+</script>

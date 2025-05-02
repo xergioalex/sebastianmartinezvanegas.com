@@ -1,9 +1,9 @@
 ---
 import Layout from './main.astro';
-const { frontmatter } = Astro.props;
+const { frontmatter, lang } = Astro.props;
 ---
 
-<Layout title={frontmatter.title}>
+<Layout title={frontmatter.title} lang={lang}>
   <main
     class="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-white dark:bg-neutral-950 md:rounded-t-md text-neutral-900"
   >

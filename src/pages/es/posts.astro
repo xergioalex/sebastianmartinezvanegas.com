@@ -1,18 +1,27 @@
 ---
+import projects from '../../collections/projects.json';
 import PageHeading from '../../components/page-heading.astro';
-import PostsLoop from '../../components/posts-loop.astro';
+import Project from '../../components/project.astro';
 import Layout from '../../layouts/main.astro';
+
+const lang: string = 'es';
 ---
 
-<Layout title="My Writing" lang="es">
+<Layout title="My Projects" lang={lang}>
   <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
     <PageHeading
-      title="My Writing"
-      description="Dive into my musings on life and tech in my latest posts; a blend of introspection and innovation. Keep an eye out for fresh insights and updates!"
+      title="My Projects"
+      description="Here are some of the current projects I've been working on. I really enjoy creating new projects and coming up with new ideas. I'm always working on something new, so check back often!"
     />
 
-    <div class="z-50 flex flex-col items-stretch w-full gap-5 my-8">
-      <PostsLoop count="999999999" />
+    <div class="z-50 grid items-stretch w-full grid-cols-1 my-8 gap-7 sm:gap-5 sm:grid-cols-2">
+      {
+        projects.map((project) => {
+          return (
+            <Project name={project.name} description={project.description} image={project.image} url={project.url} />
+          );
+        })
+      }
     </div>
   </section>
 </Layout>

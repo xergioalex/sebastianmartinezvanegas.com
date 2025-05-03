@@ -67,57 +67,95 @@
       isLoading = false;
     }
   }
+
+  function resetForm() {
+    nameValue = '';
+    emailValue = '';
+    phoneValue = '';
+    messageValue = '';
+    isSuccess = false;
+  }
 </script>
 
-<form onsubmit={handleSubmit} class="bg-cream shadow-lg p-4 space-y-3">
-  <div>
-    <label class="block text-sm font-medium mb-1" for="name">{nameLabel}</label>
-    <input
-      type="text"
-      id="name"
-      name="name"
-      bind:value={nameValue}
-      required
-      autocomplete="off"
-      class="w-full border bg-cream-light border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
-    />
+{#if isSuccess}
+  <div class="bg-cream-light shadow-lg p-8 rounded-lg flex flex-col items-center animate-fade-in text-center">
+    <div class="mb-4">
+      <!-- Neutral Checkmark Icon -->
+      <svg class="w-16 h-16 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="#fffcf0"/>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M7 13l3 3 7-7" />
+      </svg>
+    </div>
+    <p class="text-gray-900 text-2xl font-bold mb-2">
+      {lang === 'en' ? 'Thank you for your message!' : '¡Gracias por tu mensaje!'}
+    </p>
+    <p class="text-gray-700 mb-6">
+      {lang === 'en'
+        ? 'Your message has been received. I appreciate your interest.'
+        : 'Tu mensaje ha sido recibido. Aprecio tu interés.'}
+    </p>
+    <button
+      class="bg-black text-white font-semibold py-2 px-6 rounded hover:bg-gray-900 transition"
+      on:click={resetForm}
+    >
+      {lang === 'en' ? 'Send another message' : 'Enviar otro mensaje'}
+    </button>
   </div>
-  <div>
-    <label class="block text-sm font-medium mb-1" for="email">{emailLabel}</label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      bind:value={emailValue}
-      required
-      autocomplete="off"
-      class="w-full border bg-cream-light border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
-    />
-  </div>
-  <div>
-    <label class="block text-sm font-medium mb-1" for="phone">{phoneLabel}</label>
-    <input
-      type="tel"
-      id="phone"
-      name="phone"
-      bind:value={phoneValue}
-      autocomplete="off"
-      class="w-full border bg-cream-light border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
-    />
-  </div>
-  <div>
-    <label class="block text-sm font-medium mb-1" for="message">{messageLabel}</label>
-    <textarea
-      id="message"
-      name="message"
-      rows="3"
-      bind:value={messageValue}
-      required
-      autocomplete="off"
-      class="w-full border bg-cream-light border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
-    ></textarea>
-  </div>
-  <button type="submit" class="w-full bg-black text-white font-semibold py-2 rounded hover:bg-gray-900 transition"
-    >{submitButtonText}</button
-  >
-</form>
+{:else}
+  <form on:submit={handleSubmit} class="bg-cream shadow-lg p-4 space-y-3">
+    <div>
+      <label class="block text-sm font-medium mb-1" for="name">{nameLabel}</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        bind:value={nameValue}
+        required
+        autocomplete="off"
+        minlength="3"
+        class="w-full border bg-cream-light border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+      />
+    </div>
+    <div>
+      <label class="block text-sm font-medium mb-1" for="email">{emailLabel}</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        bind:value={emailValue}
+        required
+        autocomplete="off"
+        minlength="3"
+        class="w-full border bg-cream-light border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+      />
+    </div>
+    <div>
+      <label class="block text-sm font-medium mb-1" for="phone">{phoneLabel}</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        bind:value={phoneValue}
+        autocomplete="off"
+        minlength="3"
+        class="w-full border bg-cream-light border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+      />
+    </div>
+    <div>
+      <label class="block text-sm font-medium mb-1" for="message">{messageLabel}</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="3"
+        bind:value={messageValue}
+        required
+        autocomplete="off"
+        minlength="3"
+        class="w-full border bg-cream-light border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+      ></textarea>
+    </div>
+    <button type="submit" class="w-full bg-black text-white font-semibold py-2 rounded hover:bg-gray-900 transition">
+      {submitButtonText}
+    </button>
+  </form>
+{/if}

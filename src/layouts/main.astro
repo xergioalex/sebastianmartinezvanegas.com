@@ -1,7 +1,6 @@
 ---
 import Footer from '../components/footer.astro';
 import Header from '../components/header.astro';
-import SquareLines from '../components/square-lines.astro';
 const { title, lang } = Astro.props;
 import '../styles/global.css';
 ---
@@ -31,8 +30,7 @@ import '../styles/global.css';
     <script src="../assets/css/main.css"></script>
     <Fragment set:html={import.meta.env.HEADER_INJECT} />
   </head>
-  <body class="antialiased bg-white dark:bg-neutral-950">
-    <SquareLines />
+  <body class="antialiased dark:bg-neutral-950 bg-cream">
     <Header lang={lang} />
     <slot />
     <Footer lang={lang} />

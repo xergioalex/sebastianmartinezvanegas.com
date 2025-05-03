@@ -41,7 +41,6 @@
       formData.append(FORM_ENTRIES.phone, phoneValue);
       formData.append(FORM_ENTRIES.message, messageValue);
 
-
       // Register event on google analytics
       // analytics.capture('confirmation_submitted', {
       //   inviteCode: invite.code,
@@ -75,6 +74,8 @@
     messageValue = '';
     isSuccess = false;
   }
+
+  console.log(isLoading);
 </script>
 
 {#if isSuccess}
@@ -82,7 +83,7 @@
     <div class="mb-4">
       <!-- Neutral Checkmark Icon -->
       <svg class="w-16 h-16 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="#fffcf0"/>
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="#fffcf0" />
         <path stroke-linecap="round" stroke-linejoin="round" d="M7 13l3 3 7-7" />
       </svg>
     </div>

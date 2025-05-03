@@ -5,7 +5,7 @@ if (!lang) {
   lang = 'en';
 }
 const currentPath = Astro.url.pathname;
-const pathWithoutLang = currentPath.replace(/^\/[a-z]{2}\//, '/');
+const pathWithoutLang = currentPath.replace(/^\/(en|es)/, '');
 ---
 
 <!-- This is an invisible div with relative position so that it takes up the height of the menu (because menu is absolute/fixed) -->

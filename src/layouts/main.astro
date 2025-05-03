@@ -7,7 +7,7 @@ import '../styles/global.css';
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,8 +31,8 @@ import '../styles/global.css';
     <script src="../assets/css/main.css"></script>
     <Fragment set:html={import.meta.env.HEADER_INJECT} />
   </head>
-  <body class="antialiased bg-white dark:bg-neutral-950">
-    <SquareLines />
+  <body class="antialiased dark:bg-neutral-950 bg-cream">
+    <!-- <SquareLines /> -->
     <Header lang={lang} />
     <slot />
     <Footer lang={lang} />

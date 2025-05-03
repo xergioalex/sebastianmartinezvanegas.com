@@ -9,12 +9,12 @@
       "url": "/en/books"
     },
     {
-      "name": "Posts",
-      "url": "/en/posts"
+      "name": "Blog",
+      "url": "/en/blog"
     },
     {
-      "name": "About",
-      "url": "/en/about"
+      "name": "Contact",
+      "url": "/en/contact"
     }
   ],
   "es": [
@@ -27,12 +27,12 @@
       "url": "/es/books"
     },
     {
-      "name": "Posts",
-      "url": "/es/posts"
+      "name": "Blog",
+      "url": "/es/blog"
     },
     {
-      "name": "About",
-      "url": "/es/about"
+      "name": "Contacto",
+      "url": "/es/contact"
     }
   ]
 }

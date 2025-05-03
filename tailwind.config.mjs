@@ -7,6 +7,10 @@ export default {
 			fontFamily: {
 				serif: ['serif'],
 			},
+			colors: {
+				cream: '#fcf7e3',
+        'cream-light': '#fffcf0',
+			},
 		},
 	},
 	plugins: [import("@tailwindcss/typography")],

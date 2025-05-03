@@ -10,7 +10,14 @@ export default defineConfig({
   site: 'https://www.sebastianmartinezvanegas.com',
   base: '/',
   trailingSlash: 'never',
-    integrations: [tailwind(), svelte()],
+    integrations: [
+      tailwind(),
+      svelte({
+        experimental: {
+          prebundleSvelteLibraries: true
+        }
+      })
+    ],
 
   server: {
     host: true,
@@ -26,6 +33,9 @@ export default defineConfig({
     publicDir: 'public',
     build: {
       assetsDir: 'assets'
+    },
+    optimizeDeps: {
+      exclude: ['@astrojs/svelte']
     }
   }
 });

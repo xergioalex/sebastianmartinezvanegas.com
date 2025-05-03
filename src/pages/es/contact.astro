@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/main.astro';
+import ContactForm from '../../components/contact-form.svelte';
 
 const lang: string = 'es';
 ---
@@ -10,57 +11,11 @@ const lang: string = 'es';
     <p class="text-center text-gray-500 mb-2 max-w-2xl mx-auto">
       Escríbeme para proponerme algo, o para no proponerme nada, o para saludar:
     </p>
-    <p class="text-center">
+    <p class="text-center mb-4">
       <a href="mailto:sebastianmvanegas@gmail.com" class="text-black underline font-medium"
         >sebastianmvanegas@gmail.com</a
       >
     </p>
-    <form class="bg-white rounded-xl shadow p-4 space-y-3">
-      <div>
-        <label class="block text-sm font-medium mb-1" for="name">Nombre *</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          autocomplete="off"
-          class="w-full border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
-        />
-      </div>
-      <div>
-        <label class="block text-sm font-medium mb-1" for="email">Email *</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          autocomplete="off"
-          class="w-full border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
-        />
-      </div>
-      <div>
-        <label class="block text-sm font-medium mb-1" for="phone">Teléfono (opcional)</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          autocomplete="off"
-          class="w-full border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
-        />
-      </div>
-      <div>
-        <label class="block text-sm font-medium mb-1" for="message">Mensaje (opcional)</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="3"
-          autocomplete="off"
-          class="w-full border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
-        ></textarea>
-      </div>
-      <button type="submit" class="w-full bg-black text-white font-semibold py-2 rounded hover:bg-gray-900 transition"
-        >Enviar mensaje</button
-      >
-    </form>
+    <ContactForm client:load lang={lang} />
   </section>
 </Layout>

@@ -1,25 +1,118 @@
 ---
-import projects from '../../collections/projects.json';
-import PageHeading from '../../components/page-heading.astro';
-import Project from '../../components/project.astro';
 import Layout from '../../layouts/main.astro';
+
+const lang: string = 'en';
 ---
 
-<Layout title="My Projects" lang="en">
+<Layout title="My Projects" lang={lang}>
   <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
-    <PageHeading
-      title="My Projects"
-      description="Here are some of the current projects I've been working on. I really enjoy creating new projects and coming up with new ideas. I'm always working on something new, so check back often!"
-    />
+    <div class="content mt-10">
+      <h2 class="text-3xl font-bold text-center mb-12">Tener un cuerpo es mala poesía</h2>
+      <div class="flex flex-col md:flex-row gap-8 items-start mb-16">
+        <!-- Left column - Book cover -->
+        <div class="w-full md:w-1/2">
+          <img
+            src="/assets/images/books/book-1.png"
+            alt="Portada del libro"
+            class="w-full h-auto rounded-lg shadow-lg"
+          />
+        </div>
 
-    <div class="z-50 grid items-stretch w-full grid-cols-1 my-8 gap-7 sm:gap-5 sm:grid-cols-2">
-      {
-        projects.map((project) => {
-          return (
-            <Project name={project.name} description={project.description} image={project.image} url={project.url} />
-          );
-        })
-      }
+        <!-- Right column - Book content -->
+        <div class="w-full md:w-1/2">
+          <div class="space-y-4">
+            <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+              <p class="text-yellow-800 font-medium">Premio Internacional de Poesía Emilio Prados (2024)</p>
+            </div>
+            <p class="text-gray-700 leading-relaxed italic">
+              "Niños arrancándose pelos entre sí, los Simpson, besos con extraños, gritos en la casa…"
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Este libro es una intermitencia de relámpagos biográficos. Aquí, la literatura ilumina un cuerpo, lo
+              oscurece y lo vuelve a iluminar. Pasado y presente, placer y dolor, confesión y burla de esa confesión;
+              leer estos poemas es ser arrastrado por un vaivén de imágenes inusitadas. Para escribir su historia, el
+              autor se sirve de recursos aparentemente ajenos a la poesía, porque sabe que no hay nada ajeno a ella.
+            </p>
+            <a
+              href="https://pre-textos.com/producto/tener-un-cuerpo-es-mala-poesia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block mt-4 px-6 py-2 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded shadow transition"
+            >
+              Comprar este libro
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold text-center mb-12">Coordenadas de un plano irrealizable</h2>
+      <div class="flex flex-col md:flex-row gap-8 items-start mb-10">
+        <!-- Left column - Book cover -->
+        <div class="w-full md:w-1/2">
+          <img
+            src="/assets/images/books/book-2.png"
+            alt="Portada del libro"
+            class="w-full h-auto rounded-lg shadow-lg"
+          />
+        </div>
+
+        <!-- Right column - Book content -->
+        <div class="w-full md:w-1/2">
+          <div class="space-y-4">
+            <div class="space-y-2">
+              <div class="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-400">
+                <p class="text-blue-800 font-medium">
+                  Premio de Poesía Joven Radio Nacional de España-Fundación Montemadrid (2021)
+                </p>
+              </div>
+              <div class="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-400">
+                <p class="text-blue-800 font-medium">
+                  Finalista del Premio Nacional de Poesía del Ministerio de Cultura de Colombia (2023)
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <p class="text-gray-700 leading-relaxed italic">
+                  "En este libro la poesía es un animal que se asoma a la gruta de la boca para buscar la palabra que
+                  falta para hacer la casa y que seguirá faltando para que la literatura no se extinga".
+                </p>
+                <p class="text-gray-500 text-sm mt-2">—Gina Saraceni</p>
+              </div>
+
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <p class="text-gray-700 leading-relaxed italic">
+                  "Sebastián Martínez Vanegas ha escrito uno de los libros más singulares de la poesía que leemos
+                  recientemente en Colombia".
+                </p>
+                <p class="text-gray-500 text-sm mt-2">—David Marín-Hincapié</p>
+              </div>
+
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <p class="text-gray-700 leading-relaxed italic">
+                  "Con escasos 27 años, el autor, con lenguaje que anuda enigmatismo y alta precisión, construye a
+                  partir del agrietamiento y desplome de la casa una perpleja metáfora del desamparo y la ruina del
+                  mundo como morada, y de la propia voz agrietada que lo nombra".
+                </p>
+                <p class="text-gray-500 text-sm mt-2">
+                  —Declaraciones sobre los finalistas del Premio Nacional de Poesía del Ministerio de Cultura de
+                  Colombia
+                </p>
+              </div>
+
+              <a
+                href="https://pre-textos.com/producto/coordenadas-de-un-plano-irrealizable/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block mt-4 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded shadow transition"
+              >
+                Comprar este libro
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>

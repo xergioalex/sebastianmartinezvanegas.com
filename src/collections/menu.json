@@ -2,37 +2,37 @@
   "en": [
     {
       "name": "Home",
-      "url": "/"
+      "url": "/en"
     },
     {
       "name": "Books",
-      "url": "/books"
+      "url": "/en/books"
     },
     {
-      "name": "Posts",
-      "url": "/posts"
+      "name": "Blog",
+      "url": "/en/blog"
     },
     {
-      "name": "About",
-      "url": "/about"
+      "name": "Contact",
+      "url": "/en/contact"
     }
   ],
   "es": [
     {
       "name": "Inicio",
-      "url": "/"
+      "url": "/es"
     },
     {
       "name": "Libros",
-      "url": "/books"
+      "url": "/es/books"
     },
     {
-      "name": "Posts",
-      "url": "/posts"
+      "name": "Blog",
+      "url": "/es/blog"
     },
     {
-      "name": "About",
-      "url": "/about"
+      "name": "Contacto",
+      "url": "/es/contact"
     }
   ]
 }

@@ -4,6 +4,8 @@ let { lang } = Astro.props;
 if (!lang) {
   lang = 'en';
 }
+const currentPath = Astro.url.pathname;
+const pathWithoutLang = currentPath.replace(/^\/(en|es)/, '');
 ---
 
 <!-- This is an invisible div with relative position so that it takes up the height of the menu (because menu is absolute/fixed) -->
@@ -121,7 +123,7 @@ if (!lang) {
             {
               lang === 'es' ? (
                 <a
-                  href="/en"
+                  href={`/en${pathWithoutLang}`}
                   class="flex items-center gap-2 px-3 py-1 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-[15px] rounded-lg"
                 >
                   <span class="text-xl">🇬🇧</span>
@@ -129,7 +131,7 @@ if (!lang) {
                 </a>
               ) : (
                 <a
-                  href="/es"
+                  href={`/es${pathWithoutLang}`}
                   class="flex items-center gap-2 px-3 py-1 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-[15px] rounded-lg"
                 >
                   <span class="text-xl">🇪🇸</span>

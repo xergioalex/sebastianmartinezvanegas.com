@@ -3,9 +3,11 @@ import experiences from '../../collections/experiences.json';
 import AboutExperience from '../../components/about-experience.astro';
 import PageHeading from '../../components/page-heading.astro';
 import Layout from '../../layouts/main.astro';
+
+const lang: string = 'es';
 ---
 
-<Layout title="About Me" lang="en">
+<Layout title="About Me" lang={lang}>
   <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
     <PageHeading
       title="About Me"

@@ -12,6 +12,5 @@ const postsCollection = defineCollection({
 });
 
 export const collections = {
-  postsEs: postsCollection,
-  postsEn: postsCollection,
+  posts: postsCollection,
 };

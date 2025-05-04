@@ -1,38 +1,20 @@
 {
-  "en": [
-    {
-      "name": "Home",
-      "url": "/en"
-    },
-    {
-      "name": "Books",
-      "url": "/en/books"
-    },
-    {
-      "name": "Posts",
-      "url": "/en/posts"
-    },
-    {
-      "name": "Contact",
-      "url": "/en/contact"
-    }
-  ],
-  "es": [
+  "items": [
     {
       "name": "Inicio",
-      "url": "/es"
+      "url": "/"
     },
     {
       "name": "Libros",
-      "url": "/es/books"
+      "url": "/libros"
     },
     {
       "name": "Entradas",
-      "url": "/es/posts"
+      "url": "/entradas"
     },
     {
       "name": "Contacto",
-      "url": "/es/contact"
+      "url": "/contacto"
     }
   ]
 }

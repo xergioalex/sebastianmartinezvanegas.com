@@ -10,7 +10,7 @@ You can install this theme with the [Astro](https://astro.build) command like so
 npm create astro@latest -- --template ccbikai/astro-aria
 ```
 
-2. Instala las dependencias:.
+2. Instala las dependencias:
 
 ```bash
 npm install

@@ -1,13 +1,4 @@
 <script lang="ts">
-  export let lang: string = 'en';
-
-  // Form labels
-  const nameLabel = lang === 'en' ? 'Name *' : 'Nombre *';
-  const emailLabel = lang === 'en' ? 'Email *' : 'Email *';
-  const phoneLabel = lang === 'en' ? 'Phone (optional)' : 'Teléfono (opcional)';
-  const messageLabel = lang === 'en' ? 'Message *' : 'Mensaje *';
-  const submitButtonText = lang === 'en' ? 'Send message' : 'Enviar mensaje';
-
   // Form values
   let nameValue: string = '';
   let emailValue: string = '';
@@ -32,8 +23,6 @@
     event.preventDefault();
     isLoading = true;
 
-    console.log('----- handle submit -----');
-    console.log(nameValue, emailValue, phoneValue, messageValue);
     try {
       const formData = new FormData();
       formData.append(FORM_ENTRIES.name, nameValue);
@@ -88,24 +77,22 @@
       </svg>
     </div>
     <p class="text-gray-900 text-2xl font-bold mb-2">
-      {lang === 'en' ? 'Thank you for your message!' : '¡Gracias por tu mensaje!'}
+      ¡Gracias por tu mensaje!
     </p>
     <p class="text-gray-700 mb-6">
-      {lang === 'en'
-        ? 'Your message has been received. I appreciate your interest.'
-        : 'Tu mensaje ha sido recibido. Aprecio tu interés.'}
+      Tu mensaje ha sido recibido. Aprecio tu interés.
     </p>
     <button
       class="bg-black text-white font-semibold py-2 px-6 rounded hover:bg-gray-900 transition"
       on:click={resetForm}
     >
-      {lang === 'en' ? 'Send another message' : 'Enviar otro mensaje'}
+      Enviar otro mensaje
     </button>
   </div>
 {:else}
   <form on:submit={handleSubmit} class="bg-cream shadow-lg p-4 space-y-3">
     <div>
-      <label class="block text-sm font-medium mb-1" for="name">{nameLabel}</label>
+      <label class="block text-sm font-medium mb-1" for="name">Nombre *</label>
       <input
         type="text"
         id="name"
@@ -118,7 +105,7 @@
       />
     </div>
     <div>
-      <label class="block text-sm font-medium mb-1" for="email">{emailLabel}</label>
+      <label class="block text-sm font-medium mb-1" for="email">Email *</label>
       <input
         type="email"
         id="email"
@@ -131,7 +118,7 @@
       />
     </div>
     <div>
-      <label class="block text-sm font-medium mb-1" for="phone">{phoneLabel}</label>
+      <label class="block text-sm font-medium mb-1" for="phone">Teléfono (opcional)</label>
       <input
         type="tel"
         id="phone"
@@ -143,7 +130,7 @@
       />
     </div>
     <div>
-      <label class="block text-sm font-medium mb-1" for="message">{messageLabel}</label>
+      <label class="block text-sm font-medium mb-1" for="message">Mensaje *</label>
       <textarea
         id="message"
         name="message"
@@ -163,7 +150,7 @@
       disabled={isLoading}
     >
       {#if isLoading}
-        {lang === 'en' ? 'Sending...' : 'Enviando...'}
+        Enviando...
         <svg
           class="animate-spin h-5 w-5 ml-3 text-white"
           xmlns="http://www.w3.org/2000/svg"
@@ -174,7 +161,7 @@
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
         </svg>
       {:else}
-        {submitButtonText}
+        Enviar mensaje
       {/if}
     </button>
   </form>

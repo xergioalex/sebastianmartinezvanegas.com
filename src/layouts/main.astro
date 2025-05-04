@@ -31,9 +31,9 @@ import '../styles/global.css';
     <Fragment set:html={import.meta.env.HEADER_INJECT} />
   </head>
   <body class="antialiased dark:bg-neutral-950 bg-cream">
-    <Header lang={lang} />
+    <Header />
     <slot />
-    <Footer lang={lang} />
+    <Footer />
     <script src="../assets/js/main.js"></script>
     <Fragment set:html={import.meta.env.FOOTER_INJECT} />
   </body>

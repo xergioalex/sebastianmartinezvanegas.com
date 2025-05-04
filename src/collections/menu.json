@@ -9,8 +9,8 @@
       "url": "/en/books"
     },
     {
-      "name": "Blog",
-      "url": "/en/blog"
+      "name": "Posts",
+      "url": "/en/posts"
     },
     {
       "name": "Contact",
@@ -27,8 +27,8 @@
       "url": "/es/books"
     },
     {
-      "name": "Blog",
-      "url": "/es/blog"
+      "name": "Entradas",
+      "url": "/es/posts"
     },
     {
       "name": "Contacto",

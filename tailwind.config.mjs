@@ -5,6 +5,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
+				laomn: ['LaoMN', 'serif'],
 				serif: ['serif'],
 			},
 			colors: {

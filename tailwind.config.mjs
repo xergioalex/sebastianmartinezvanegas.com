@@ -10,6 +10,7 @@ export default {
 			colors: {
 				cream: '#fcf7e3',
         'cream-light': '#fffcf0',
+        'cream-dark': '#f1ecd4',
 			},
 		},
 	},

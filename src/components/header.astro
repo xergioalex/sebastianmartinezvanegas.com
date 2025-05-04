@@ -47,7 +47,7 @@ const pathWithoutLang = currentPath.replace(/^\/(en|es)/, '');
         }
       </div>
       <div class="flex flex-row items-center justify-center">
-        <div class="action-dark">
+        <!-- <div class="action-dark">
           <div
             id="darkToggle"
             class="relative flex items-center pl-6 ml-4 font-medium tracking-wide cursor-pointer text-neutral-800 group dark:text-white order-3"
@@ -86,7 +86,7 @@ const pathWithoutLang = currentPath.replace(/^\/(en|es)/, '');
               <span id="nightText" class="hidden ml-2"></span>
             </span>
           </div>
-        </div>
+        </div> -->
         <div class="action-lang ml-4">
           <button
             id="lang-menu"
@@ -121,7 +121,7 @@ const pathWithoutLang = currentPath.replace(/^\/(en|es)/, '');
               lang === 'es' ? (
                 <a
                   href={`/en${pathWithoutLang}`}
-                  class="flex items-center gap-2 px-3 py-1 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-[15px] rounded-lg"
+                  class="flex items-center gap-2 px-3 py-1 hover:bg-cream-dark transition-colors text-[15px] rounded-lg"
                 >
                   <span class="text-xl">🇬🇧</span>
                   <span>English</span>
@@ -129,7 +129,7 @@ const pathWithoutLang = currentPath.replace(/^\/(en|es)/, '');
               ) : (
                 <a
                   href={`/es${pathWithoutLang}`}
-                  class="flex items-center gap-2 px-3 py-1 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-[15px] rounded-lg"
+                  class="flex items-center gap-2 px-3 py-1 hover:bg-cream-dark transition-colors text-[15px] rounded-lg"
                 >
                   <span class="text-xl">🇪🇸</span>
                   <span>Español</span>

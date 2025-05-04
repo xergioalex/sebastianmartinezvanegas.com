@@ -1,6 +1,7 @@
 ---
 import Footer from '../components/footer.astro';
 import Header from '../components/header.astro';
+import GoogleAnalytics from '../components/google-analytics.astro';
 let { title, description, keywords } = Astro.props;
 import '../styles/global.css';
 
@@ -44,6 +45,7 @@ if (!keywords) {
     <link rel="icon" type="image/x-icon" href="../faviconref.png" />
     <script src="../assets/css/main.css"></script>
     <Fragment set:html={import.meta.env.HEADER_INJECT} />
+    <GoogleAnalytics />
   </head>
   <body class="antialiased dark:bg-neutral-950 bg-cream">
     <Header />

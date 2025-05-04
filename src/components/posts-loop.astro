@@ -27,7 +27,6 @@ const sortedPosts = allPosts
 const postsLoop = sortedPosts.slice(0, count).map((post) => {
   return {
     ...(post.data || {}),
-    // link: `/${lang}/posts/${post.slug}`,
   };
 });
 ---
@@ -85,7 +84,7 @@ const postsLoop = sortedPosts.slice(0, count).map((post) => {
               </svg>
             </h2>
             <p class="text-sm text-neutral-600 dark:text-neutral-400">
-              <span>{post.description}</span>
+              <span set:html={post.description}></span>
             </p>
             <div class="mt-2.5 text-xs font-medium text-neutral-600 dark:text-neutral-300">
               <b>{dateFormatted(post.date)}</b>

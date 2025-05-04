@@ -155,8 +155,27 @@
         class="w-full border bg-cream-light border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
       ></textarea>
     </div>
-    <button type="submit" class="w-full bg-black text-white font-semibold py-2 rounded hover:bg-gray-900 transition">
-      {submitButtonText}
+    <button
+      type="submit"
+      class="w-full bg-black text-white font-semibold py-2 rounded hover:bg-gray-900 transition flex items-center justify-center {isLoading
+        ? 'opacity-60 cursor-not-allowed'
+        : ''}"
+      disabled={isLoading}
+    >
+      {#if isLoading}
+        {lang === 'en' ? 'Sending...' : 'Enviando...'}
+        <svg
+          class="animate-spin h-5 w-5 ml-3 text-white"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+        </svg>
+      {:else}
+        {submitButtonText}
+      {/if}
     </button>
   </form>
 {/if}

@@ -15,5 +15,15 @@ export default {
 			},
 		},
 	},
-	plugins: [import("@tailwindcss/typography")],
+	plugins: [
+    import("@tailwindcss/typography"),
+    // Agrega este plugin para utilidades personalizadas
+    function ({ addUtilities }) {
+      addUtilities({
+        '.small-caps': {
+          'font-variant': 'small-caps',
+        },
+      });
+    },
+  ],
 };

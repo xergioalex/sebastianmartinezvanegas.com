@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { analytics } from '../lib/analytics';
+
   // Form values
   let nameValue: string = '';
   let emailValue: string = '';
@@ -31,12 +33,12 @@
       formData.append(FORM_ENTRIES.message, messageValue);
 
       // Register event on google analytics
-      // analytics.capture('confirmation_submitted', {
-      //   inviteCode: invite.code,
-      //   partyAttendance,
-      //   stayAttendance,
-      //   hasMessage: message.trim().length > 0,
-      // });
+      analytics.capture('contact_form_submitted', {
+        name: nameValue,
+        email: emailValue,
+        phone: phoneValue,
+        message: messageValue,
+      });
 
       await fetch(FORM_URL, {
         method: 'POST',

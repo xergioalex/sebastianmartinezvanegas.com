@@ -12,8 +12,7 @@ function parseDate(dateStr: string) {
 }
 
 function dateFormatted(dateStr: string) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [day, month, year] = dateStr.split('/').map(Number);
+  const [, month, year] = dateStr.split('/').map(Number);
   const monthStr = month < 10 ? `0${month}` : `${month}`;
   return `${monthStr}/${year}`;
 }
@@ -89,9 +88,7 @@ const postsLoop = sortedPosts.slice(0, count).map((post) => {
               <span>{post.description}</span>
             </p>
             <div class="mt-2.5 text-xs font-medium text-neutral-600 dark:text-neutral-300">
-              <b>
-                {dateFormatted(post.date)}
-              </b>
+              <b>{dateFormatted(post.date)}</b>
             </div>
           </div>
         </div>

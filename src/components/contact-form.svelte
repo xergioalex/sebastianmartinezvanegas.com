@@ -76,12 +76,8 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M7 13l3 3 7-7" />
       </svg>
     </div>
-    <p class="text-gray-900 text-2xl font-bold mb-2">
-      ¡Gracias por tu mensaje!
-    </p>
-    <p class="text-gray-700 mb-6">
-      Tu mensaje ha sido recibido. Aprecio tu interés.
-    </p>
+    <p class="text-gray-900 text-2xl font-bold mb-2">¡Gracias por tu mensaje!</p>
+    <p class="text-gray-700 mb-6">Tu mensaje ha sido recibido. Aprecio tu interés.</p>
     <button
       class="bg-black text-white font-semibold py-2 px-6 rounded hover:bg-gray-900 transition"
       on:click={resetForm}

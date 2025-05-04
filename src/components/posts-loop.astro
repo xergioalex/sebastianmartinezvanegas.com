@@ -84,7 +84,7 @@ const postsLoop = sortedPosts.slice(0, count).map((post) => {
               </svg>
             </h2>
             <p class="text-sm text-neutral-600 dark:text-neutral-400">
-              <span set:html={post.description}></span>
+              <span set:html={post.description} />
             </p>
             <div class="mt-2.5 text-xs font-medium text-neutral-600 dark:text-neutral-300">
               <b>{dateFormatted(post.date)}</b>

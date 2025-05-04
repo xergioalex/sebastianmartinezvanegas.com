@@ -1,11 +1,9 @@
 ---
-import Layout from '../../layouts/main.astro';
-import ContactForm from '../../components/contact-form.svelte';
-
-const lang: string = 'es';
+import Layout from '../layouts/main.astro';
+import ContactForm from '../components/contact-form.svelte';
 ---
 
-<Layout title="Contacto" lang={lang}>
+<Layout title="Contacto">
   <section class="relative z-20 max-w-xl mx-auto my-12 px-7 lg:px-0">
     <h1 class="font-laomn small-caps text-neutral-600 text-3xl font-bold text-center mb-2">Contacto</h1>
     <p class="text-center text-gray-500 mb-2 max-w-2xl mx-auto">
@@ -16,6 +14,6 @@ const lang: string = 'es';
         >sebastianmvanegas@gmail.com</a
       >
     </p>
-    <ContactForm client:load lang={lang} />
+    <ContactForm client:load />
   </section>
 </Layout>

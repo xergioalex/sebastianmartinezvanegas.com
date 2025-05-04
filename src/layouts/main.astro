@@ -1,16 +1,30 @@
 ---
 import Footer from '../components/footer.astro';
 import Header from '../components/header.astro';
-const { title, lang } = Astro.props;
+let { title, description, keywords } = Astro.props;
 import '../styles/global.css';
+
+if (!title) {
+  title = 'Sebastián Martínez Vanegas';
+}
+
+if (!description) {
+  description = 'Autor de Tener un cuerpo es mala poesía  y de Coordenadas de un plano irrealizable';
+}
+
+if (!keywords) {
+  keywords = 'Sebastián Martínez Vanegas, Tener un cuerpo es mala poesía, Coordenadas de un plano irrealizable, Escritor, Poeta, Poesía, Poesía colombiana, Colombia, Premio Emilio Prado, Premio de Poesía Joven, Pre-Textos,Editorial Pretextos';
+}
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
 
     <!-- Used to add dark mode right away, adding here prevents any flicker -->
     <!-- <script is:inline>

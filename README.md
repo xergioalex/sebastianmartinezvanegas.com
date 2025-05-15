@@ -8,7 +8,6 @@ Bienvenido al repositorio del sitio web personal de Sebastián Martínez Vanegas
 
 Pereira, 1996. Es autor de Tener un cuerpo es mala poesía (Premio Internacional de Poesía Emilio Prados en 2024) y de Coordenadas de un plano irrealizable (ganador del Premio de Poesía Joven RNE-Fundación Montemadrid en 2021 y finalista del Premio Nacional de Poesía del Ministerio de Colombia en 2023). Disfrutó de la beca de creación de la Fundación Antonio Gala para Jóvenes Creadores entre 2023 y 2024. Su obra aparece en medios como Periódico de Poesía (de la UNAM), Círculo de Poesía, Poesía (de la Universidad de Carabobo), Temporales, entre otros.
 
-
 ## 🌟 Características
 
 - **Página de inicio**: Presentación personal y resumen de contenido
@@ -28,22 +27,26 @@ Pereira, 1996. Es autor de Tener un cuerpo es mala poesía (Premio Internacional
 ## 🚀 Desarrollo Local
 
 1. Clona el repositorio:
+
 ```bash
 git clone git@github.com:xergioalex/sebastianmartinezvanegas.com.git
 cd sebastianmartinezvanegas.com
 ```
 
 2. Instala las dependencias:
+
 ```bash
 npm install
 ```
 
 3. Crea un archivo `.env` basado en `.env.example` y configura tus variables de entorno:
+
 ```bash
 cp .env.example .env
 ```
 
 4. Inicia el servidor de desarrollo:
+
 ```bash
 npm run dev
 ```
@@ -69,4 +72,3 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 ## 👨‍💻 Creado por
 
 - [XergioAleX](https://www.xergioalex.com/)
-
